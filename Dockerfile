@@ -10,8 +10,11 @@ LABEL "repository"="https://github.com/bboysoulcn/hexo-deploy"
 LABEL "homepage"="https://github.com/bboysoulcn/hexo-deploy"
 LABEL "maintainer"="bboysoul"
 
+RUN apk -U --no-cache add git
+
 COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
+
 
 ENTRYPOINT ["/entrypoint.sh"]

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-
-
 if [ -z "$PUBLISH_DIR" ]
 then
   echo "You must provide the action with the folder path in the repository where your compiled page generate at, example public."
