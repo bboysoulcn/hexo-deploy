@@ -28,6 +28,8 @@ REPOSITORY_PATH="https://x-access-token:${PERSONAL_TOKEN}@github.com/${PUBLISH_R
 
 cd $GITHUB_WORKSPACE 
 
+npm install hexo-cli -g
+
 npm install
 
 hexo clean && hexo generate
