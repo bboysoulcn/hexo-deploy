@@ -28,11 +28,13 @@ REPOSITORY_PATH="https://x-access-token:${PERSONAL_TOKEN}@github.com/${PUBLISH_R
 
 cd $GITHUB_WORKSPACE 
 
-npm install hexo-cli -g
+npm install hexo-cli -g 
 
 npm install
 
-hexo clean && hexo generate
+hexo clean 
+
+hexo generate --silent
 
 cd $PUBLISH_DIR
 
@@ -45,7 +47,7 @@ git add .
 
 datetime=`date '+%Y%m%d-%X'`
 
-git commit -m "update at $datetime"
+git commit -m "update at $datetime" --short
 
 git push origin "${BRANCH}" -f
 
