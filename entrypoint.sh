@@ -47,7 +47,7 @@ git add .
 
 datetime=`date '+%Y%m%d-%X'`
 
-git commit -m "update at $datetime" --short
+git commit -m "update at $datetime" >/dev/null
 
 git push origin "${BRANCH}" -f
 
